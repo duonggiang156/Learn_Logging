@@ -13,3 +13,14 @@ Trong main.py, import hàm này và chạy thử.
 
 Quan sát log, thấy tên logger "math_utils".
 """
+import logging
+from math_utils import safe_sqrt
+
+logging.basicConfig(
+    level=logging.DEBUG,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d  %H:%M:%S",
+)
+
+print(safe_sqrt(3))
+print(safe_sqrt(-9))
